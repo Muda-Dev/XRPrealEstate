@@ -14,6 +14,7 @@ from dotenv import load_dotenv
 load_dotenv()
 application.register_blueprint(account)
 
+print("starting realState")
 print("version", version)
 
 if os.getenv("callback_url") == "":

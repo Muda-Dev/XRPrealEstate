@@ -2,7 +2,7 @@ from xrpl.wallet import generate_faucet_wallet
 from xrpl.clients import JsonRpcClient
 from xrpl.models.transactions import Payment, TrustSet
 from xrpl.models.amounts import IssuedCurrencyAmount
-from xrpl.wallet import Wallet
+from xrpl.wallet import Wallet, SignerListSet,SignerEntry
 from helpers.config import rpc_endpoints
 from xrpl.models.transactions.transaction import Signer
 

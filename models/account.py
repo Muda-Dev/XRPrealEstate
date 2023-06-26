@@ -8,10 +8,8 @@ from helpers.modal import Modal as Md
 from helpers.config import service_url
 from abc import ABC, abstractmethod
 from helpers.XRPLedger import XRPLedger
-from helpers.EVMConnector import EVMConnector
 
 xrp = XRPLedger()
-evc = EVMConnector()
 
 
 class Chain(ABC):
@@ -45,7 +43,7 @@ class EVMChain(Chain):
 class XRPChain(Chain):
     def __init__(self):
         self.xrp = XRPLedger()
-        self.evm = EVMConnector(os.getenv("CONTRACT_ADDRESS"),abi=os.getenv("ABI"),rpc_url=os.getenv("RPC"),chain_id=1)
+        self.evm 
 
     def generate_keypair(self):
         classic_address, seed = self.xrp.generate_key_pair()
